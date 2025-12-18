@@ -7,38 +7,10 @@
 
   <style>
     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-}
-
-/* TRANSFORMATIONS GRID */
-..transformations {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  margin-top: 40px;
-  justify-items: center;
-;
-}
-
-.transformation-card h3 {
-  margin-bottom: 15px;
-  color: #fff;
-  font-weight: bold;
-}
-
-..max-width: 480px;
-
-.transformation-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
     }
 
     header {
@@ -57,30 +29,44 @@
       background: #111;
     }
 
-    ..section {
-  padding: 40px 20px;
-}
-
+    .section {
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
       text-align: center;
     }
 
-    ..transformations {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
+    /* TRANSFORMATIONS */
+    .transformations {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+      justify-items: center;
+    }
 
-.transformations img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
+    .transformation-card {
+      background: #fff;
+      padding: 16px;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+    }
 
+    .transformation-card h3 {
+      margin-bottom: 12px;
+      color: #000;
+      font-weight: bold;
+    }
 
+    .transformation-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      display: block;
+    }
+
+    /* FORM */
     .form input,
     .form textarea,
     .form button {
@@ -105,8 +91,8 @@
 
   <!-- LOGO -->
   <header>
-  <img src="IMG_20251105_102005_037.webp" alt="Tampa Bay Mobile Trainer Logo">
-</header>
+    <img src="IMG_20251105_102005_037.webp" alt="Tampa Bay Mobile Trainer Logo">
+  </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -120,36 +106,31 @@
 
     <div class="transformations">
 
-  <div class="transformation-card">
-    <h3>40 lb Weight Loss</h3>
-    <img src="Transformation1.webp.jpg" alt="Before and After Transformation 1">
-  </div>
+      <div class="transformation-card">
+        <h3>40 lb Weight Loss</h3>
+        <img src="Transformation1.webp.jpg" alt="Before and After Transformation 1">
+      </div>
 
-  <div class="transformation-card">
-    <h3>Body Recomposition</h3>
-    <img src="Transformation2.webp.jpg" alt="Before and After Transformation 2">
-  </div>
+      <div class="transformation-card">
+        <h3>Body Recomposition</h3>
+        <img src="Transformation2.webp.jpg" alt="Before and After Transformation 2">
+      </div>
 
-</div>
+    </div>
   </section>
 
-  <!-- CONTACT FORM -->
+  <!-- CONTACT FORM (CONNECTED) -->
   <section class="section">
     <h2>Book a Consultation</h2>
 
-    <form class="form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <input type="text" placeholder="Phone">
-      <textarea placeholder="Your goals"></textarea>
+    <form class="form" action="https://formspree.io/f/mwkgrqjr" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Phone">
+      <textarea name="message" placeholder="Your goals"></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>
-
-</body>
-</html>
-  </form>
-</section>
 
 </body>
 </html>
