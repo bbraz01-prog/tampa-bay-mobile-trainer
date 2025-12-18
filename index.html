@@ -7,10 +7,36 @@
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* TRANSFORMATIONS GRID */
+.transformations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.transformation-card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.transformation-card img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  display: block;
+  margin: 0 auto;
+}
+
+
     }
 
     header {
@@ -89,8 +115,17 @@
     <h2>Client Transformations</h2>
 
     <div class="transformations">
-  <img src="Transformation1.webp.jpg" alt="Client Transformation 1">
-  <img src="Transformation2.webp.jpg" alt="Client Transformation 2">
+
+  <div class="transformation-card">
+    <h3>40 lb Weight Loss</h3>
+    <img src="Transformation1.webp.jpg" alt="Before and After Transformation 1">
+  </div>
+
+  <div class="transformation-card">
+    <h3>Body Recomposition</h3>
+    <img src="Transformation2.webp.jpg" alt="Before and After Transformation 2">
+  </div>
+
 </div>
   </section>
 
