@@ -125,11 +125,19 @@
   <section class="section">
     <h2>Book a Consultation</h2>
 
-    <form class="form" action="https://formspree.io/f/mwkgrgjr" method="POST">
+    <form
+      class="form"
+      action="https://formspree.io/f/mpqazbpb"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="New Training Consultation Request">
+      <input type="hidden" name="_redirect" value="https://tampa-bay-mobile-trainer.vercel.app/">
+
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="Email" required>
       <input type="text" name="phone" placeholder="Phone">
       <textarea name="message" placeholder="Your goals"></textarea>
+
       <button type="submit">Submit</button>
     </form>
   </section>
