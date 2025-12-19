@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tampa Bay Mobile Trainer</title>
 
-  <!-- Calendly embed script -->
+  <!-- Calendly embed -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
@@ -65,6 +65,37 @@
     .transformation-card img {
       width: 100%;
       border-radius: 14px;
+    }
+
+    /* GOOGLE REVIEWS */
+    .reviews-box {
+      background: #111;
+      border-radius: 20px;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    .stars {
+      font-size: 26px;
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .review-text {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .review-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
     }
 
     /* FORM */
@@ -130,12 +161,34 @@
     </div>
   </section>
 
+  <!-- GOOGLE REVIEWS -->
+  <section class="section">
+    <div class="reviews-box">
+      <h2>⭐ Client Reviews</h2>
+      <div class="stars">★★★★★</div>
+
+      <p class="review-text">
+        “Byron is professional, motivating, and results-driven.
+        I lost weight, gained confidence, and feel stronger than ever.
+        Highly recommend Tampa Bay Mobile Trainer!”
+      </p>
+
+      <a
+        class="review-btn"
+        href="https://www.google.com/search?q=Tampa+Bay+Mobile+Trainer+reviews"
+        target="_blank"
+      >
+        Read More Google Reviews
+      </a>
+    </div>
+  </section>
+
   <!-- BOOKING -->
   <section class="section">
     <h2>Book Your Free Consultation</h2>
 
     <div class="calendly-container">
-      <div 
+      <div
         class="calendly-inline-widget"
         data-url="https://calendly.com/bbraz01/30min"
         style="min-width:320px;height:700px;">
@@ -143,22 +196,4 @@
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section class="section">
-    <h2>Or Send a Message</h2>
-
-    <form class="form" action="https://formspree.io/f/mpqazbpb" method="POST">
-      <input type="hidden" name="_subject" value="New Training Consultation Request">
-      <input type="hidden" name="_redirect" value="https://tampa-bay-mobile-trainer.vercel.app/">
-
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="phone" placeholder="Phone">
-      <textarea name="message" placeholder="Your goals"></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-</body>
-</html>
+  <!-- CONTACT FORM
