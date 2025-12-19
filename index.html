@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tampa Bay Mobile Trainer</title>
 
+  <!-- Calendly embed script -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
   <style>
     body {
       margin: 0;
@@ -16,7 +20,6 @@
     header {
       padding: 20px;
       text-align: center;
-      background: #000;
     }
 
     header img {
@@ -61,16 +64,7 @@
 
     .transformation-card img {
       width: 100%;
-      height: auto;
       border-radius: 14px;
-      display: block;
-    }
-
-    /* MAP */
-    .map-container {
-      margin-top: 30px;
-      border-radius: 16px;
-      overflow: hidden;
     }
 
     /* FORM */
@@ -96,39 +90,12 @@
       cursor: pointer;
     }
 
-    /* STICKY CONTACT BAR */
-    .contact-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      z-index: 9999;
-    }
-
-    .contact-bar a {
-      flex: 1;
-      padding: 16px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .call-btn {
-      background: #00c853;
-      color: #000;
-    }
-
-    .text-btn {
-      background: #2979ff;
-      color: #fff;
-    }
-
-    @media (min-width: 900px) {
-      .contact-bar {
-        display: none;
-      }
+    /* CALENDLY */
+    .calendly-container {
+      background: #fff;
+      border-radius: 20px;
+      margin-top: 30px;
+      padding: 10px;
     }
   </style>
 </head>
@@ -163,36 +130,24 @@
     </div>
   </section>
 
-  <!-- SERVICE AREA -->
+  <!-- BOOKING -->
   <section class="section">
-    <h2>Service Area</h2>
-    <p>
-      Proudly serving Tampa, St. Petersburg, Clearwater, Brandon,
-      Riverview, Wesley Chapel, and surrounding Tampa Bay communities.
-    </p>
+    <h2>Book Your Free Consultation</h2>
 
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=Tampa%20Bay%20Florida&output=embed"
-        width="100%"
-        height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="calendly-container">
+      <div 
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/bbraz01/30min"
+        style="min-width:320px;height:700px;">
+      </div>
     </div>
   </section>
 
   <!-- CONTACT FORM -->
   <section class="section">
-    <h2>Book a Consultation</h2>
+    <h2>Or Send a Message</h2>
 
-    <form
-      class="form"
-      action="https://formspree.io/f/mpqazbpb"
-      method="POST"
-    >
+    <form class="form" action="https://formspree.io/f/mpqazbpb" method="POST">
       <input type="hidden" name="_subject" value="New Training Consultation Request">
       <input type="hidden" name="_redirect" value="https://tampa-bay-mobile-trainer.vercel.app/">
 
@@ -204,12 +159,6 @@
       <button type="submit">Submit</button>
     </form>
   </section>
-
-  <!-- STICKY MOBILE CONTACT BAR -->
-  <div class="contact-bar">
-    <a href="tel:+18135551234" class="call-btn">📞 Call Now</a>
-    <a href="sms:+18135551234" class="text-btn">💬 Text Me</a>
-  </div>
 
 </body>
 </html>
