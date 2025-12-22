@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Tampa Bay Mobile Personal Trainer | In-Home Fitness & Weight Loss</title>
 
-  <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+  <!-- GOOGLE SEARCH CONSOLE -->
   <meta name="google-site-verification" content="8cUvGYwI2fYjrNsMEtZ2camPTW1sl0HYx8FWrtrxpwA" />
 
-  <!-- SEO META -->
-  <meta name="description" content="In-home personal training, weight loss, and mobility coaching across Tampa Bay. Train in the comfort of your home. Book a free consultation today.">
-  <meta name="keywords" content="Tampa Bay personal trainer, mobile personal trainer Tampa, in home fitness Tampa Bay, weight loss trainer Tampa">
-  <meta name="author" content="Byron Brazzle">
+  <!-- SEO -->
+  <meta name="description" content="In-home personal training, mobility, and weight loss coaching in Tampa, St. Petersburg, Clearwater, and surrounding areas. Train at home with Tampa Bay Mobile Trainer." />
+  <meta name="keywords" content="Tampa Bay personal trainer, mobile personal trainer Tampa, in home fitness Tampa, St Petersburg personal trainer, Clearwater personal trainer" />
+  <meta name="author" content="Byron Brazzle" />
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Tampa Bay Mobile Trainer">
-  <meta property="og:description" content="In-home personal training across Tampa Bay.">
-  <meta property="og:image" content="https://tampa-bay-mobile-trainer.vercel.app/IMG_20251105_102005_037.webp">
-  <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tampa Bay Mobile Trainer" />
+  <meta property="og:description" content="In-home personal training and weight loss coaching across Tampa Bay." />
+  <meta property="og:image" content="https://tampa-bay-mobile-trainer.vercel.app/hero.jpg" />
+  <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app" />
+  <meta property="og:type" content="website" />
 
-  <!-- LOCAL BUSINESS SCHEMA -->
+  <!-- GOOGLE FONTS (C) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- REVIEW SCHEMA (B) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Tampa Bay Mobile Trainer",
     "url": "https://tampa-bay-mobile-trainer.vercel.app",
-    "areaServed": "Tampa Bay, Florida",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "FL",
-      "addressCountry": "US"
+    "areaServed": ["Tampa", "St. Petersburg", "Clearwater", "Tampa Bay"],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "2"
     },
-    "priceRange": "$$"
+    "review": [
+      {
+        "@type": "Review",
+        "author": "Alina B.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "After an accident left me with severe scarring and lymphedema, Byron’s stretching sessions made a huge difference."
+      },
+      {
+        "@type": "Review",
+        "author": "Carly R.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "Byron’s workouts are tailored, effective, and his focus on mobility made a real difference."
+      }
+    ]
   }
   </script>
 
@@ -45,7 +70,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', Arial, sans-serif;
       background: #000;
       color: #fff;
     }
@@ -53,32 +78,67 @@
     header {
       padding: 20px;
       text-align: center;
+      background: #fff;
     }
 
     header img {
       height: 80px;
     }
 
+    /* HERO */
     .hero {
+      background: #fff;
+      color: #000;
       padding: 90px 20px;
-      background: #111;
-      text-align: center;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #ccc;
-      max-width: 700px;
+    .hero-inner {
+      max-width: 1200px;
       margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #555;
+      max-width: 480px;
+      margin-bottom: 30px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #c62828;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .hero-image {
+      flex: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 14px;
     }
 
     .section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
       text-align: center;
@@ -101,6 +161,7 @@
 
     .transformation-card h3 {
       color: #000;
+      font-weight: 600;
     }
 
     .transformation-card img {
@@ -131,18 +192,7 @@
     .review-author {
       font-size: 14px;
       color: #aaa;
-      margin-top: 8px;
       margin-bottom: 20px;
-    }
-
-    .review-btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #fff;
-      color: #000;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
     }
 
     /* CALENDLY */
@@ -168,7 +218,54 @@
     .form button {
       background: #fff;
       color: #000;
-      font-weight: bold;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* STICKY MOBILE BAR (A) */
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      z-index: 9999;
+    }
+
+    .mobile-bar a {
+      flex: 1;
+      padding: 16px;
+      text-align: center;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .call {
+      background: #00c853;
+      color: #000;
+    }
+
+    .text {
+      background: #2979ff;
+      color: #fff;
+    }
+
+    @media (min-width: 900px) {
+      .mobile-bar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
@@ -180,8 +277,24 @@
 </header>
 
 <section class="hero">
-  <h1>Train at Home. Get Real Results.</h1>
-  <p>In-home personal training, mobility, and weight loss coaching throughout Tampa Bay.</p>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>
+        Get in shape,<br>
+        in the comfort<br>
+        of your home
+      </h1>
+      <p>
+        In-home personal training, mobility, and weight loss coaching
+        throughout Tampa, St. Petersburg, and Clearwater.
+      </p>
+      <a href="#booking" class="hero-btn">Get Started</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="hero.jpg" alt="In-home personal training in Tampa Bay">
+    </div>
+  </div>
 </section>
 
 <section class="section">
@@ -195,7 +308,7 @@
 
     <div class="transformation-card">
       <h3>Body Recomposition</h3>
-      <img src="Transformation2.webp.jpg" alt="body recomposition before and after">
+      <img src="Transformation2.webp.jpg" alt="Body recomposition before and after">
     </div>
   </div>
 </section>
@@ -206,23 +319,21 @@
   <div class="reviews-box">
     <div class="stars">★★★★★</div>
     <p class="review-text">
-      “After an accident left me with severe scarring and lymphedema, Byron’s stretching sessions made a huge difference.
-      I noticed real improvement and I’m truly grateful for his help.”
+      “After an accident left me with severe scarring and lymphedema,
+      Byron’s stretching sessions made a huge difference.”
     </p>
-    <p class="review-author">— Alina B. (Booksy, July 2025)</p>
+    <p class="review-author">— Alina B. (Booksy)</p>
 
     <div class="stars">★★★★★</div>
     <p class="review-text">
-      “Byron has supported my fitness journey for years. His workouts are tailored, effective,
-      and his focus on mobility made a real difference. I highly recommend him.”
+      “Byron’s workouts are tailored, effective, and his focus on mobility
+      made a real difference.”
     </p>
-    <p class="review-author">— Carly R. (Booksy, August 2025)</p>
-
-    <a class="review-btn" href="https://www.booksy.com/" target="_blank">Reviews sourced from Booksy</a>
+    <p class="review-author">— Carly R. (Booksy)</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="booking">
   <h2>Book Your Free Consultation</h2>
 
   <div class="calendly-container">
@@ -248,6 +359,12 @@
     <button type="submit">Submit</button>
   </form>
 </section>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mobile-bar">
+  <a href="tel:+18135551234" class="call">📞 Call</a>
+  <a href="sms:+18135551234" class="text">💬 Text</a>
+</div>
 
 </body>
 </html>
