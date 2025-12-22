@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tampa-bay-mobile-trainer.vercel.app/sitemap.xml
