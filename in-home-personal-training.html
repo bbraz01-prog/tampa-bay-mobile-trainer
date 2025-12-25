@@ -6,14 +6,17 @@
 
   <title>In-Home Personal Training in Tampa Bay | Mobile Trainer</title>
 
+  <!-- GOOGLE SEARCH CONSOLE -->
+  <meta name="google-site-verification" content="8cUvGYwI2fYjrNsMEtZ2camPTW1sl0HYx8FWrtrxpwA" />
+
   <!-- SEO -->
-  <meta name="description" content="In-home personal training in Tampa Bay. Certified personal trainers who come to your home with customized workouts and equipment." />
-  <meta name="keywords" content="in home personal training Tampa Bay, mobile personal trainer Tampa, personal trainer at home" />
+  <meta name="description" content="In-home personal training in Tampa Bay. Certified trainers who come to you. Weight loss, strength, and mobility without the gym." />
+  <meta name="keywords" content="in home personal training Tampa Bay, mobile personal trainer Tampa, personal trainer Clearwater, weight loss trainer Tampa" />
   <meta name="author" content="Byron Brazzle" />
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="In-Home Personal Training in Tampa Bay" />
-  <meta property="og:description" content="Personal training at home with certified trainers. We come to you." />
+  <meta property="og:description" content="Certified trainers. Real results. We come to you." />
   <meta property="og:image" content="https://tampa-bay-mobile-trainer.vercel.app/hero.jpg" />
   <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app/in-home-personal-training.html" />
   <meta property="og:type" content="website" />
@@ -22,6 +25,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- LOCAL BUSINESS SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tampa Bay Mobile Trainer",
+    "url": "https://tampa-bay-mobile-trainer.vercel.app",
+    "telephone": "+1-813-555-1234",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tampa Bay",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Tampa", "Clearwater", "St. Petersburg", "Holiday", "Pasco County"],
+    "priceRange": "$$"
+  }
+  </script>
 
   <!-- CALENDLY -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -43,6 +65,7 @@
 
     header img { height: 80px; }
 
+    /* HERO */
     .hero {
       background: #fff;
       color: #000;
@@ -50,7 +73,7 @@
     }
 
     .hero-inner {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -59,7 +82,7 @@
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 44px;
       font-weight: 700;
       margin-bottom: 15px;
     }
@@ -67,27 +90,45 @@
     .hero p {
       font-size: 18px;
       color: #555;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
-    .btn {
+    .hero-btn {
       background: #c62828;
       color: #fff;
       padding: 14px 28px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      margin-right: 10px;
       display: inline-block;
     }
 
     .hero-image {
-      height: 380px;
+      height: 420px;
       border-radius: 16px;
       background-image: url("hero.jpg");
       background-size: cover;
       background-position: center;
     }
 
+    /* TRUST */
+    .trust {
+      background: #111;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .trust-grid {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      color: #ccc;
+    }
+
+    /* SECTION */
     .section {
       max-width: 1000px;
       margin: auto;
@@ -95,44 +136,63 @@
       text-align: center;
     }
 
-    .section p {
-      color: #ccc;
-      font-size: 17px;
-      line-height: 1.6;
+    /* STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .features {
+    .step {
+      background: #111;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    /* SERVICES */
+    .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
       margin-top: 40px;
     }
 
-    .feature {
-      background: #111;
-      padding: 30px;
+    .service {
+      background: #fff;
+      color: #000;
+      padding: 25px;
       border-radius: 16px;
       font-weight: 600;
     }
 
-    .why {
+    /* REVIEWS */
+    .reviews-box {
       background: #111;
-      padding: 40px;
+      padding: 30px;
       border-radius: 20px;
       text-align: left;
     }
 
-    .why ul {
-      padding-left: 20px;
-      color: #ccc;
-    }
+    .stars { color: #ffd700; }
 
+    /* CALENDLY */
     .calendly-container {
       background: #fff;
       border-radius: 20px;
       overflow: hidden;
     }
 
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+    }
+
+    footer a { color: #aaa; }
+
+    /* MOBILE BAR */
     .mobile-bar {
       position: fixed;
       bottom: 0;
@@ -175,54 +235,67 @@
   <div class="hero-inner">
     <div>
       <h1>In-Home Personal Training in Tampa Bay</h1>
-      <p>Certified personal trainers who come to your home with customized workouts designed around your goals.</p>
-      <a href="#booking" class="btn">Book a Free Consultation</a>
+      <p><strong>Certified Trainers. Real Results. We Come to You.</strong></p>
+      <p>Lose weight, build strength, and stay consistent — without the gym.</p>
+      <a href="#booking" class="hero-btn">Book a Free Consultation</a>
+      <a href="tel:+18135551234" class="hero-btn" style="background:#444;">Call / Text Now</a>
     </div>
     <div class="hero-image"></div>
   </div>
 </section>
 
-<!-- WHAT IT IS -->
-<section class="section">
-  <h2>Personal Training That Comes to You</h2>
-  <p>
-    Our in-home personal training service is designed for busy adults who want real results without the gym.
-    We bring the equipment, create a personalized plan, and train you in the comfort of your home.
-  </p>
-
-  <div class="features">
-    <div class="feature">✔ One-on-One Coaching</div>
-    <div class="feature">✔ Customized Programs</div>
-    <div class="feature">✔ No Gym Required</div>
-    <div class="feature">✔ Flexible Scheduling</div>
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-grid">
+    <div>✔ Certified Personal Trainers</div>
+    <div>✔ Customized Programs</div>
+    <div>✔ In-Home • Outdoor • Virtual</div>
+    <div>✔ Serving Tampa Bay</div>
   </div>
 </section>
 
-<!-- WHY CHOOSE -->
+<!-- HOW IT WORKS -->
 <section class="section">
-  <h2>Why Choose In-Home Training?</h2>
-  <div class="why">
-    <ul>
-      <li>No commute or crowded gyms</li>
-      <li>Private, distraction-free workouts</li>
-      <li>Programs tailored to your body and goals</li>
-      <li>Built-in accountability and consistency</li>
-      <li>Perfect for beginners and experienced clients</li>
-    </ul>
+  <h2>Getting Started Is Easy</h2>
+  <div class="steps">
+    <div class="step">1. Schedule a Free Consultation</div>
+    <div class="step">2. Get Matched With a Trainer</div>
+    <div class="step">3. Train at Home on Your Schedule</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">In-Home Personal Training</div>
+    <div class="service">Weight Loss Coaching</div>
+    <div class="service">Strength & Muscle Building</div>
+    <div class="service">Mobility & Pain-Free Movement</div>
+    <div class="service">Senior Fitness</div>
+    <div class="service">Corrective Exercise</div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <h2>Real People. Real Results.</h2>
+  <div class="reviews-box">
+    <div class="stars">★★★★★</div>
+    <p>“Byron’s stretching sessions made a huge difference in my recovery.”</p>
+    <p>— Alina B. (Booksy)</p>
   </div>
 </section>
 
 <!-- SERVICE AREA -->
 <section class="section">
-  <h2>Serving Tampa Bay</h2>
-  <p>
-    Tampa • Clearwater • St. Petersburg • Holiday • Pasco County
-  </p>
+  <h2>Proudly Serving Tampa Bay</h2>
+  <p>Tampa • Clearwater • St. Petersburg • Holiday • Pasco County</p>
 </section>
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 <section class="section" id="booking">
-  <h2>Start Training at Home</h2>
+  <h2>Ready to Train Without the Gym?</h2>
   <div class="calendly-container">
     <div class="calendly-inline-widget"
       data-url="https://calendly.com/bbraz01/30min"
@@ -230,6 +303,11 @@
     </div>
   </div>
 </section>
+
+<footer>
+  <a href="/privacy.html">Privacy Policy</a> |
+  <a href="/terms.html">Terms & Conditions</a>
+</footer>
 
 <div class="mobile-bar">
   <a href="tel:+18135551234" class="call">📞 Call</a>
