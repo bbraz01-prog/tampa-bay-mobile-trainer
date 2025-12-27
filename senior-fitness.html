@@ -1,55 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senior Fitness Training at Home | Tampa Bay</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta name="description" content="Senior fitness training at home in Tampa Bay. Safe, supportive workouts focused on strength, balance, and mobility.">
-<meta name="keywords" content="senior fitness Tampa Bay, in home personal trainer seniors, balance training Tampa">
-<meta name="author" content="Byron Brazzle">
+  <title>Senior Fitness in Tampa Bay | Tampa Bay Mobile Trainer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- SEO META -->
+  <meta name="description" content="Senior fitness training in Tampa Bay. Improve balance, strength, mobility, and confidence with in-home personal training for older adults." />
+  <meta name="keywords" content="senior fitness Tampa Bay, senior personal trainer Tampa, balance training Clearwater, mobility training St Petersburg, strength training for seniors" />
+  <meta name="author" content="Byron Brazzle" />
 
-<style>
-body{margin:0;font-family:'Inter',Arial,sans-serif;background:#000;color:#fff}
-header{background:#fff;text-align:center;padding:20px}
-header img{height:80px}
-.hero{background:#fff;color:#000;padding:80px 20px}
-.hero-inner{max-width:1000px;margin:auto;text-align:center}
-.section{max-width:900px;margin:auto;padding:70px 20px;text-align:center}
-.calendly-container{background:#fff;border-radius:20px;overflow:hidden}
-</style>
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Senior Fitness in Tampa Bay" />
+  <meta property="og:description" content="In-home senior fitness to improve strength, balance, and mobility." />
+  <meta property="og:image" content="https://tampa-bay-mobile-trainer.vercel.app/hero.jpg" />
+  <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app/senior-fitness.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- SERVICE SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Senior Fitness Training",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Tampa Bay Mobile Trainer",
+      "areaServed": [
+        "Tampa",
+        "Clearwater",
+        "St. Petersburg",
+        "St. Pete",
+        "Pasco County"
+      ]
+    }
+  }
+  </script>
+
+  <!-- CALENDLY -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    header {
+      background: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    .hero {
+      background: #fff;
+      color: #000;
+      padding: 90px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .hero-btn {
+      background: #c62828;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 12px;
+      display: inline-block;
+    }
+
+    .hero-image {
+      height: 420px;
+      border-radius: 16px;
+      background-image: url("hero.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .benefit {
+      background: #111;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .calendly-container {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #aaa;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-image {
+        height: 260px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<img src="logo.webp" alt="Tampa Bay Mobile Trainer Logo">
+  <img src="logo.webp" alt="Tampa Bay Mobile Trainer Logo">
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div class="hero-inner">
-<h1>Senior Fitness Training at Home</h1>
-<p>Safe, supportive workouts focused on strength, balance, and independence.</p>
-</div>
+  <div class="hero-inner">
+    <div>
+      <h1>Senior Fitness in Tampa Bay</h1>
+      <p><strong>Improve balance. Stay strong. Move with confidence.</strong></p>
+      <p>In-home personal training designed for older adults — safe, supportive, and effective.</p>
+      <a href="/#booking" class="hero-btn">Book a Free Consultation</a>
+      <a href="tel:+18135551234" class="hero-btn" style="background:#444;">Call / Text Now</a>
+    </div>
+    <div class="hero-image"></div>
+  </div>
 </section>
 
 <section class="section">
-<h2>Designed for Older Adults</h2>
-<p>Our senior fitness programs improve mobility, reduce fall risk, and help you stay strong at home.</p>
+  <h2>Fitness for Strength, Balance, and Independence</h2>
+  <p>
+    Our senior fitness program helps you stay active and independent with training focused on
+    balance, mobility, posture, and practical strength for everyday life.
+  </p>
+
+  <div class="benefits">
+    <div class="benefit">✔ Improve balance & reduce fall risk</div>
+    <div class="benefit">✔ Build safe, functional strength</div>
+    <div class="benefit">✔ Increase mobility & flexibility</div>
+    <div class="benefit">✔ Support joint health & posture</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Who This Is For</h2>
+  <p>
+    Senior fitness is perfect for older adults who want to stay active, feel stronger, improve confidence,
+    and move better — without crowded gyms.
+  </p>
+  <p>
+    Sessions are personalized to your fitness level, mobility, and any limitations.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Proudly Serving Tampa Bay</h2>
+  <p>Tampa • Clearwater • St. Petersburg • St. Pete • Pasco County</p>
 </section>
 
 <section class="section" id="booking">
-<h2>Schedule a Free Consultation</h2>
-<div class="calendly-container">
-<div class="calendly-inline-widget"
-data-url="https://calendly.com/bbraz01/30min"
-style="min-width:320px;height:750px;"></div>
-</div>
+  <h2>Get Started With Senior Fitness</h2>
+  <div class="calendly-container">
+    <div class="calendly-inline-widget"
+      data-url="https://calendly.com/bbraz01/30min"
+      style="min-width:320px;height:750px;">
+    </div>
+  </div>
 </section>
+
+<footer>
+  <a href="/privacy.html">Privacy Policy</a> |
+  <a href="/terms.html">Terms & Conditions</a>
+</footer>
+
+<!-- FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is personal training safe for seniors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Senior training is customized to your fitness level and mobility, with safe progressions focused on strength, balance, and joint-friendly movement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does senior fitness training focus on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Senior fitness training focuses on balance, functional strength, mobility, flexibility, posture, and confidence for everyday activities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer senior fitness training at home in Tampa Bay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide in-home senior fitness throughout Tampa Bay including Tampa, Clearwater, St. Petersburg, St. Pete, and Pasco County."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need equipment for senior fitness training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We bring equipment when needed and can also train effectively using simple movements tailored to your space and ability."
+      }
+    }
+  ]
+}
+</script>
 
 </body>
 </html>
