@@ -18,7 +18,7 @@
   <meta property="og:title" content="In-Home Personal Training in Tampa Bay" />
   <meta property="og:description" content="Certified trainers. Real results. We come to you." />
   <meta property="og:image" content="https://tampa-bay-mobile-trainer.vercel.app/hero.jpg" />
-  <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app" />
+  <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app/in-home-personal-training.html" />
   <meta property="og:type" content="website" />
 
   <!-- FONT -->
@@ -32,8 +32,10 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Tampa Bay Mobile Trainer",
+    "image": "https://tampa-bay-mobile-trainer.vercel.app/logo.webp",
     "url": "https://tampa-bay-mobile-trainer.vercel.app",
     "telephone": "+1-813-555-1234",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "FL",
@@ -45,8 +47,7 @@
       "St. Petersburg",
       "St. Pete",
       "Pasco County"
-    ],
-    "priceRange": "$$"
+    ]
   }
   </script>
 
@@ -61,23 +62,18 @@
       background: #000;
       color: #fff;
     }
-
     header {
       background: #fff;
       text-align: center;
       padding: 20px;
     }
-
-    header img {
-      height: 80px;
-    }
+    header img { height: 80px; }
 
     .hero {
       background: #fff;
       color: #000;
       padding: 90px 20px;
     }
-
     .hero-inner {
       max-width: 1200px;
       margin: auto;
@@ -86,19 +82,16 @@
       gap: 50px;
       align-items: center;
     }
-
     .hero h1 {
       font-size: 44px;
       font-weight: 700;
       margin-bottom: 15px;
     }
-
     .hero p {
       font-size: 18px;
       color: #555;
       margin-bottom: 25px;
     }
-
     .hero-btn {
       background: #c62828;
       color: #fff;
@@ -109,7 +102,6 @@
       margin-right: 12px;
       display: inline-block;
     }
-
     .hero-image {
       height: 420px;
       border-radius: 16px;
@@ -123,7 +115,6 @@
       padding: 40px 20px;
       text-align: center;
     }
-
     .trust-grid {
       max-width: 900px;
       margin: auto;
@@ -166,9 +157,7 @@
       text-align: left;
     }
 
-    .stars {
-      color: #ffd700;
-    }
+    .stars { color: #ffd700; }
 
     .calendly-container {
       background: #fff;
@@ -182,10 +171,7 @@
       color: #888;
       font-size: 14px;
     }
-
-    footer a {
-      color: #aaa;
-    }
+    footer a { color: #aaa; }
 
     .mobile-bar {
       position: fixed;
@@ -195,7 +181,6 @@
       display: flex;
       z-index: 9999;
     }
-
     .mobile-bar a {
       flex: 1;
       padding: 16px;
@@ -203,24 +188,15 @@
       font-weight: bold;
       text-decoration: none;
     }
-
     .call { background: #00c853; color: #000; }
     .text { background: #2979ff; color: #fff; }
 
     @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .hero-image {
-        height: 260px;
-      }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-image { height: 260px; }
     }
-
     @media (min-width: 900px) {
-      .mobile-bar {
-        display: none;
-      }
+      .mobile-bar { display: none; }
     }
   </style>
 </head>
@@ -288,6 +264,21 @@
   <p>Tampa • Clearwater • St. Petersburg • St. Pete • Pasco County</p>
 </section>
 
+<!-- GOOGLE MAPS EMBED -->
+<section class="section">
+  <h2>Service Area</h2>
+  <p>We provide in-home personal training throughout Tampa Bay and surrounding areas.</p>
+  <div style="margin-top:30px;border-radius:16px;overflow:hidden;">
+    <iframe
+      src="https://www.google.com/maps?q=Tampa+Bay+Florida&output=embed"
+      width="100%"
+      height="400"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
 <section class="section" id="booking">
   <h2>Ready to Train Without the Gym?</h2>
   <div class="calendly-container">
@@ -307,6 +298,8 @@
   <a href="tel:+18135551234" class="call">📞 Call</a>
   <a href="sms:+18135551234" class="text">💬 Text</a>
 </div>
+
+<!-- FAQ SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -317,7 +310,7 @@
       "name": "What is in-home personal training?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In-home personal training is a personalized fitness service where a certified trainer comes to your home to provide customized workouts, accountability, and coaching without the need for a gym."
+        "text": "In-home personal training is a personalized fitness service where a certified trainer comes to your home to provide customized workouts, accountability, and coaching."
       }
     },
     {
@@ -330,38 +323,15 @@
     },
     {
       "@type": "Question",
-      "name": "Who is in-home personal training best for?",
+      "name": "Do I need equipment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In-home personal training is ideal for beginners, busy professionals, seniors, and anyone who prefers privacy, convenience, and personalized coaching without crowded gyms."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need equipment for in-home personal training?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. We bring the necessary equipment and also design effective workouts using bodyweight and functional movements tailored to your space."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often should I do in-home personal training?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most clients train 2 to 3 times per week, but frequency is customized based on your goals, schedule, and fitness level."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How soon will I see results from in-home personal training?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Many clients notice increased energy, strength, and mobility within the first few weeks. Long-term results come from consistency and personalized coaching."
+        "text": "No. We bring equipment and also design effective bodyweight workouts based on your space and goals."
       }
     }
   ]
 }
 </script>
+
 </body>
 </html>
