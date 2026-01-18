@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>In-Home Personal Training in Tampa Bay | Tampa Bay Mobile Trainer</title>
+  <title>Tampa Bay Mobile Trainer | In-Home Personal Training</title>
 
   <!-- GOOGLE SEARCH CONSOLE -->
   <meta name="google-site-verification" content="8cUvGYwI2fYjrNsMEtZ2camPTW1sl0HYx8FWrtrxpwA" />
 
   <!-- SEO -->
-  <meta name="description" content="In-home personal training in Tampa Bay. Certified trainers who come to you. Weight loss, strength, and mobility without the gym." />
-  <meta name="keywords" content="in home personal training Tampa Bay, mobile personal trainer Tampa, weight loss trainer Tampa, personal trainer Clearwater, personal trainer St Petersburg" />
+  <meta name="description" content="In-home personal training across Tampa Bay. Weight loss, strength training, and mobility coaching delivered to your home. Book a free consultation." />
+  <meta name="keywords" content="in home personal training Tampa Bay, mobile personal trainer, personal trainer Clearwater, personal trainer Palm Harbor, personal trainer St Petersburg, weight loss coaching Tampa Bay, strength training Tampa Bay, mobility training Tampa Bay" />
   <meta name="author" content="Byron Brazzle" />
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="In-Home Personal Training in Tampa Bay" />
+  <meta property="og:title" content="Tampa Bay Mobile Trainer" />
   <meta property="og:description" content="Certified trainers. Real results. We come to you." />
   <meta property="og:image" content="https://tampa-bay-mobile-trainer.vercel.app/hero.jpg" />
   <meta property="og:url" content="https://tampa-bay-mobile-trainer.vercel.app" />
@@ -25,6 +25,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- LOCAL BUSINESS SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tampa Bay Mobile Trainer",
+    "url": "https://tampa-bay-mobile-trainer.vercel.app",
+    "telephone": "+1-727-277-3929",
+    "areaServed": [
+      "Clearwater",
+      "Palm Harbor",
+      "St. Petersburg",
+      "Tampa Bay"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "priceRange": "$$"
+  }
+  </script>
 
   <!-- CALENDLY -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -38,200 +61,273 @@
       color: #fff;
     }
 
-    /* Header */
     header {
       background: #fff;
+      text-align: center;
       padding: 18px 20px;
       position: sticky;
       top: 0;
       z-index: 999;
-      border-bottom: 1px solid #eee;
     }
 
-    .header-inner{
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
+    header img { height: 70px; }
 
-    header img { height: 64px; }
-
-    nav {
+    .top-nav {
       display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 10px;
       flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-end;
     }
 
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
+    .top-nav a {
       color: #111;
-      padding: 10px 14px;
-      border-radius: 8px;
-      transition: 0.2s ease;
+      text-decoration: none;
+      font-weight: 700;
       font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.05);
     }
 
-    nav a:hover {
-      background: #f1f1f1;
-    }
-
-    .nav-cta {
-      background: #c62828;
-      color: #fff !important;
-    }
-
-    .nav-cta:hover {
-      background: #a81f1f;
-    }
-
+    /* HERO */
     .hero {
       background: #fff;
       color: #000;
-      padding: 80px 20px;
+      padding: 72px 20px;
     }
 
     .hero-inner {
       max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 50px;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: 44px;
-      font-weight: 700;
-      margin-bottom: 15px;
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 14px;
     }
 
     .hero p {
       font-size: 18px;
       color: #555;
-      margin-bottom: 18px;
+      margin: 0 0 18px;
+      line-height: 1.6;
     }
 
-    .hero-btn {
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-primary {
       background: #c62828;
       color: #fff;
-      padding: 14px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-right: 12px;
-      display: inline-block;
-      margin-top: 6px;
+    }
+
+    .btn-dark {
+      background: #222;
+      color: #fff;
     }
 
     .hero-image {
       height: 420px;
-      border-radius: 16px;
+      border-radius: 18px;
       background-image: url("hero.jpg");
       background-size: cover;
       background-position: center;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.18);
     }
 
+    /* TRUST */
     .trust {
-      background: #111;
-      padding: 40px 20px;
+      background: #0f0f0f;
+      padding: 34px 20px;
       text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .trust-grid {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      color: #ccc;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      color: #d5d5d5;
+      font-weight: 700;
     }
 
+    /* SECTION */
     .section {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       padding: 70px 20px;
       text-align: center;
     }
 
+    .section h2 {
+      font-size: 34px;
+      margin: 0 0 16px;
+    }
+
+    .section p {
+      color: #cfcfcf;
+      line-height: 1.75;
+      font-size: 17px;
+      margin: 0 auto 14px;
+      max-width: 900px;
+    }
+
+    /* HOW IT WORKS */
     .steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+      text-align: left;
     }
 
     .step {
       background: #111;
-      padding: 30px;
-      border-radius: 16px;
+      padding: 24px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
+    .step strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    /* SERVICES (LINKED FOR SEO) */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      gap: 18px;
+      margin-top: 26px;
+      text-align: left;
     }
 
     .service-card {
       background: #fff;
       color: #000;
-      padding: 30px;
-      border-radius: 16px;
+      padding: 24px;
+      border-radius: 18px;
       text-decoration: none;
-      display: block;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.18);
     }
 
     .service-card h3 {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .service-card p {
-      color: #444;
       margin: 0;
+      color: #444;
+      line-height: 1.6;
+      font-size: 16px;
+      max-width: none;
     }
 
+    /* REVIEWS */
     .reviews-box {
       background: #111;
-      padding: 30px;
-      border-radius: 20px;
+      padding: 28px;
+      border-radius: 18px;
       text-align: left;
-      max-width: 800px;
-      margin: 30px auto 0 auto;
+      border: 1px solid rgba(255,255,255,0.06);
+      max-width: 900px;
+      margin: 26px auto 0;
     }
 
-    .stars { color: #ffd700; }
+    .stars { color: #ffd700; font-size: 20px; margin-bottom: 10px; }
 
+    /* SERVICE AREA */
+    .area-pill {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #eaeaea;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    /* CALENDLY */
     .calendly-container {
       background: #fff;
-      border-radius: 20px;
+      border-radius: 18px;
       overflow: hidden;
-      max-width: 900px;
-      margin: auto;
+      margin-top: 24px;
     }
 
     footer {
-      padding: 30px;
+      padding: 28px 20px;
       text-align: center;
-      color: #888;
+      color: #9a9a9a;
       font-size: 14px;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
-    footer a { color: #aaa; }
+    footer a { color: #cfcfcf; }
+
+    /* MOBILE BAR */
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      z-index: 9999;
+    }
+
+    .mobile-bar a {
+      flex: 1;
+      padding: 16px;
+      text-align: center;
+      font-weight: 900;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .call { background: #00c853; color: #000; }
+    .text { background: #2979ff; color: #fff; }
 
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; text-align: center; }
       .hero-image { height: 260px; }
-      nav { justify-content: center; }
-      header img { height: 56px; }
+      .steps, .services { text-align: left; }
+    }
+
+    @media (min-width: 900px) {
+      .mobile-bar { display: none; }
     }
   </style>
 </head>
@@ -239,80 +335,99 @@
 <body>
 
 <header>
-  <div class="header-inner">
-    <a href="index.html" aria-label="Home">
-      <img src="logo.webp" alt="Tampa Bay Mobile Trainer Logo">
-    </a>
+  <img src="logo.webp" alt="Tampa Bay Mobile Trainer Logo">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#booking" class="nav-cta">Book</a>
-      <a href="byron.html">Byron</a>
-      <a href="service-area.html">Service Area</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
+  <nav class="top-nav">
+    <a href="#services">Services</a>
+    <a href="#booking">Book</a>
+    <a href="tel:+17272773929">Call</a>
+    <a href="sms:+17272773929">Text</a>
+  </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
       <h1>In-Home Personal Training in Tampa Bay</h1>
       <p><strong>Certified Trainers. Real Results. We Come to You.</strong></p>
-      <p>Lose weight, build strength, and stay consistent — without the gym.</p>
+      <p>Weight loss, strength training, and mobility coaching delivered to your home — no gym required.</p>
 
-      <a href="#booking" class="hero-btn">Book a Free Consultation</a>
-      <a href="tel:+18135551234" class="hero-btn" style="background:#444;">Call / Text Now</a>
+      <div class="hero-cta">
+        <a href="#booking" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="tel:+17272773929" class="btn btn-dark">Call 727-277-3929</a>
+        <a href="sms:+17272773929" class="btn btn-dark">Text 727-277-3929</a>
+      </div>
     </div>
-    <div class="hero-image"></div>
+
+    <div class="hero-image" aria-label="In-home personal training in Tampa Bay"></div>
   </div>
 </section>
 
+<!-- TRUST -->
 <section class="trust">
   <div class="trust-grid">
     <div>✔ Certified Personal Trainers</div>
     <div>✔ Customized Programs</div>
-    <div>✔ In-Home • Outdoor • Virtual</div>
-    <div>✔ Serving Tampa Bay</div>
+    <div>✔ In-Home • Outdoor • Hybrid Options</div>
+    <div>✔ Clearwater • Palm Harbor • St. Pete</div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="section">
   <h2>Getting Started Is Easy</h2>
+  <p>We keep it simple: we learn your goals, build your plan, then train on your schedule.</p>
+
   <div class="steps">
-    <div class="step">1. Schedule a Free Consultation</div>
-    <div class="step">2. Get Matched With a Trainer</div>
-    <div class="step">3. Train at Home on Your Schedule</div>
+    <div class="step">
+      <strong>1) Schedule a Free Consultation</strong>
+      Pick a time that works. We’ll talk goals, schedule, and what you want to change.
+    </div>
+    <div class="step">
+      <strong>2) Get a Clear Plan</strong>
+      You’ll get a simple plan built around your lifestyle, equipment, and starting point.
+    </div>
+    <div class="step">
+      <strong>3) Train at Home (Or Hybrid)</strong>
+      We coach you through sessions and keep you accountable week to week.
+    </div>
   </div>
 </section>
 
-<section class="section">
+<!-- LINKED SERVICES -->
+<section class="section" id="services">
   <h2>Our Personal Training Services</h2>
+  <p>Each service below has its own page (better SEO) and helps Google understand what you offer.</p>
+
   <div class="services">
     <a href="/in-home-training.html" class="service-card">
       <h3>In-Home Personal Training</h3>
-      <p>One-on-one coaching delivered to your home.</p>
+      <p>One-on-one coaching delivered to your home with full accountability.</p>
     </a>
 
     <a href="/weight-loss-coaching.html" class="service-card">
       <h3>Weight Loss Coaching</h3>
-      <p>Sustainable fat loss without crash dieting.</p>
+      <p>Sustainable fat loss without crash dieting — focused on consistency.</p>
     </a>
 
     <a href="/strength-training.html" class="service-card">
       <h3>Strength Training</h3>
-      <p>Build muscle and strength safely at home.</p>
+      <p>Build lean muscle and real strength safely (beginner-friendly to advanced).</p>
     </a>
 
     <a href="/mobility-pain-free-movement.html" class="service-card">
-      <h3>Mobility & Pain-Free Movement</h3>
-      <p>Improve joint health and movement quality.</p>
+      <h3>Mobility &amp; Pain-Free Movement</h3>
+      <p>Move better, feel better, and improve joint-friendly performance.</p>
     </a>
   </div>
 </section>
 
+<!-- SOCIAL PROOF -->
 <section class="section">
   <h2>Real People. Real Results.</h2>
+  <p>Short, specific reviews beat long paragraphs. Add more as you get them.</p>
+
   <div class="reviews-box">
     <div class="stars">★★★★★</div>
     <p>“Byron’s stretching sessions made a huge difference in my recovery.”</p>
@@ -320,11 +435,21 @@
   </div>
 </section>
 
+<!-- SERVICE AREA -->
+<section class="section">
+  <h2>Proudly Serving</h2>
+  <p>We’re focused on fast ROI areas where you already work: Clearwater + Palm Harbor, expanding next.</p>
+  <div class="area-pill">Clearwater • Palm Harbor • St. Petersburg (St. Pete) • Tampa Bay</div>
+</section>
+
+<!-- BOOKING -->
 <section class="section" id="booking">
-  <h2>Ready to Train Without the Gym?</h2>
+  <h2>Book Your Free Consultation</h2>
+  <p>Choose a time and we’ll confirm details by text.</p>
+
   <div class="calendly-container">
     <div class="calendly-inline-widget"
-      data-url="https://calendly.com/bbraz01/30min"
+      data-url="https://calendly.com/bbraz01/30min?hide_event_type_details=1&hide_gdpr_banner=1"
       style="min-width:320px;height:750px;">
     </div>
   </div>
@@ -332,8 +457,15 @@
 
 <footer>
   <a href="/privacy.html">Privacy Policy</a> |
-  <a href="/terms.html">Terms & Conditions</a>
+  <a href="/terms.html">Terms &amp; Conditions</a><br>
+  © Tampa Bay Mobile Trainer
 </footer>
+
+<!-- MOBILE CTA BAR -->
+<div class="mobile-bar">
+  <a href="tel:+17272773929" class="call">📞 Call</a>
+  <a href="sms:+17272773929" class="text">💬 Text</a>
+</div>
 
 </body>
 </html>
