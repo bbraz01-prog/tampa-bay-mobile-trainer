@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Private Mobile & Online Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- META PIXEL (replace YOUR_PIXEL_ID when you have it) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+</head>
+
+<body style="font-family: Arial; max-width: 420px; margin: 60px auto; padding: 20px;">
+  <h1>Private Mobile & Online Training</h1>
+  <p>For busy professionals who want visible results without gym crowds or guessing.</p>
+
+  <form
+    action="https://formspree.io/f/xkozwjgv"
+    method="POST"
+    onsubmit="if(window.fbq){fbq('track','Lead');}"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="First Name"
+      required
+      style="width:100%; padding:10px; margin-bottom:10px;"
+    />
+
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Phone Number"
+      required
+      style="width:100%; padding:10px; margin-bottom:10px;"
+    />
+
+    <input
+      type="text"
+      name="city"
+      placeholder="City"
+      style="width:100%; padding:10px; margin-bottom:15px;"
+    />
+
+    <!-- Redirect after submit -->
+    <input
+      type="hidden"
+      name="_redirect"
+      value="https://tampa-bay-mobile-trainer.vercel.app/thanks.html"
+    />
+
+    <button
+      type="submit"
+      style="width:100%; padding:12px; background:black; color:white; font-size:16px; cursor:pointer;"
+    >
+      Get Training Details
+    </button>
+  </form>
+</body>
+</html>
