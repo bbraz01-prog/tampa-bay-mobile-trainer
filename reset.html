@@ -21,26 +21,22 @@
     fbq('init', '1420563573143889');
     fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1420563573143889&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- ============================================= -->
-
 </head>
 
 <body style="font-family: Arial, sans-serif; background:#f8f8f8; padding:20px;">
 
-  <div style="max-width:600px; margin:auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,.08);">
+  <div id="mainBox"
+    style="max-width:600px; margin:auto; background:#fff; padding:25px;
+    border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,.08);">
 
-    <h1 style="margin-top:0;">🔥 Get My Free 7-Day Fat Loss Reset</h1>
+    <h1>🔥 Get My Free 7-Day Fat Loss Reset</h1>
 
-    <p style="line-height:1.5;">
+    <p>
       Lose fat, build momentum, and feel better in just 7 days — without extreme dieting.
     </p>
 
     <h3>You’ll Get:</h3>
-    <ul style="line-height:1.6;">
+    <ul>
       <li>Home + Gym Workouts</li>
       <li>Daily Step Goals</li>
       <li>Simple Nutrition Structure</li>
@@ -49,142 +45,158 @@
 
     <h3>Enter Your Info Below:</h3>
 
-    <!-- ================= LEAD FORM ================= -->
-    <form id="leadForm" autocomplete="on">
+    <!-- FORM -->
+    <form id="leadForm">
 
-      <input id="name" type="text" name="name" placeholder="First Name" required
-        style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:8px;">
+      <input id="name" type="text" placeholder="Name" required
+        style="width:100%; padding:12px; margin-bottom:10px;">
 
-      <input id="email" type="email" name="email" placeholder="Email" required
-        style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:8px;">
+      <input id="email" type="email" placeholder="Email" required
+        style="width:100%; padding:12px; margin-bottom:10px;">
 
-      <input id="phone" type="tel" name="phone" placeholder="Phone Number" required
-        style="width:100%; padding:12px; margin-bottom:10px; border:1px solid #ddd; border-radius:8px;">
+      <input id="phone" type="tel" placeholder="Phone" required
+        style="width:100%; padding:12px; margin-bottom:10px;">
 
-      <select id="goal" name="goal" required
-        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-        <option value="Lose Fat">Lose Fat</option>
-        <option value="Tone Up">Tone Up</option>
-        <option value="Build Strength">Build Strength</option>
-        <option value="Get Consistent">Get Consistent</option>
+      <select id="goal" required
+        style="width:100%; padding:12px; margin-bottom:15px;">
+        <option>Fat Loss</option>
+        <option>Build Muscle</option>
+        <option>Tone Up</option>
+        <option>Improve Energy</option>
+        <option>Get Back in Shape</option>
       </select>
 
       <button id="submitBtn" type="submit"
-        style="width:100%; padding:14px; background:black; color:white; border:none; font-size:16px; border-radius:10px; cursor:pointer;">
+        style="width:100%; padding:14px; background:black; color:white;
+        border:none; font-size:16px; cursor:pointer;">
         Get Free Access
       </button>
 
-      <div id="statusMsg" style="margin-top:12px; font-size:14px;"></div>
+      <div id="status" style="margin-top:12px;"></div>
 
     </form>
-    <!-- ============================================= -->
 
-    <p style="margin-top:15px; font-size:12px; color:#555;">
+    <p style="font-size:12px; color:#555;">
       We respect your privacy. No spam.
     </p>
 
   </div>
 
-  <!-- ================= FORM LOGIC ================= -->
+  <!-- LOGIC -->
   <script>
-    /*
-      ✅ REQUIRED (BEST VERSION):
-      1) GOOGLE_FORM_RESPONSE_URL (must end with /formResponse)
-      2) ENTRY IDs for each field (entry.xxxxx)
 
-      ✅ FALLBACK:
-      - Redirects to your public Google Form link so you still capture the lead.
-    */
-
-    // Your public Google Form link (fallback redirect)
-    // (I’m using your full viewform link here, which is more reliable than the short forms.gle link)
-    const GOOGLE_FORM_PUBLIC_LINK =
-      "https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/viewform";
-
-    // AFTER submit, send them to your Reset Doc / Thank You page
-    const DELIVERY_LINK = "PASTE_YOUR_RESET_GOOGLE_DOC_OR_THANKYOU_LINK_HERE";
-
-    // ✅ Filled in for you:
-    const GOOGLE_FORM_RESPONSE_URL =
+    // Google Form submit endpoint
+    const FORM_URL =
       "https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/formResponse";
 
-    // ❗Replace these 4 with your REAL entry IDs
-    const ENTRY_NAME  = "entry.111111111111";
-    const ENTRY_EMAIL = "entry.222222222222";
-    const ENTRY_PHONE = "entry.333333333333";
-    const ENTRY_GOAL  = "entry.444444444444";
+    // Reset Program
+    const RESET_DOC =
+      "https://docs.google.com/document/d/1qyak5SQKTRztHzg1vM8b3aPqIYF4KjEm9Rl7WYHQmM4/view?usp=sharing";
 
-    const leadForm  = document.getElementById("leadForm");
-    const submitBtn = document.getElementById("submitBtn");
-    const statusMsg = document.getElementById("statusMsg");
+    // Pages
+    const HOME_PAGE = "index.html";
+    const COACHING_PAGE = "coaching.html";
 
-    function isConfiguredForBackgroundSubmit() {
-      return (
-        GOOGLE_FORM_RESPONSE_URL &&
-        GOOGLE_FORM_RESPONSE_URL.includes("formResponse") &&
-        ENTRY_NAME.startsWith("entry.") &&
-        ENTRY_EMAIL.startsWith("entry.") &&
-        ENTRY_PHONE.startsWith("entry.") &&
-        ENTRY_GOAL.startsWith("entry.")
-      );
-    }
+    // Entry IDs
+    const ENTRY_NAME  = "entry.14153905";
+    const ENTRY_EMAIL = "entry.985988409";
+    const ENTRY_PHONE = "entry.1317232275";
+    const ENTRY_GOAL  = "entry.624894712";
 
-    leadForm.addEventListener("submit", async function(e) {
+
+    const form = document.getElementById("leadForm");
+    const box  = document.getElementById("mainBox");
+
+    form.addEventListener("submit", async function(e){
+
       e.preventDefault();
 
-      // Disable button to prevent double submits
-      submitBtn.disabled = true;
-      submitBtn.style.opacity = "0.75";
-      submitBtn.textContent = "Submitting...";
-      statusMsg.textContent = "One sec…";
+      // Fire pixel
+      if (typeof fbq === "function") fbq("track","Lead");
 
-      const name  = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
+      const name  = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
       const goal  = document.getElementById("goal").value;
 
-      // Fire Meta Lead Event
-      if (typeof fbq === "function") {
-        fbq("track", "Lead");
-      }
+      // Build payload
+      const data = new FormData();
 
-      // If not configured yet, fallback to Google Form page
-      if (!isConfiguredForBackgroundSubmit()) {
-        statusMsg.textContent = "Almost there… sending you to the form.";
-        setTimeout(() => {
-          window.location.href = GOOGLE_FORM_PUBLIC_LINK;
-        }, 500);
-        return;
-      }
+      data.append(ENTRY_NAME, name);
+      data.append(ENTRY_EMAIL, email);
+      data.append(ENTRY_PHONE, phone);
+      data.append(ENTRY_GOAL, goal);
 
-      // Background submit to Google Form
+      // Send to Google
       try {
-        const data = new FormData();
-        data.append(ENTRY_NAME, name);
-        data.append(ENTRY_EMAIL, email);
-        data.append(ENTRY_PHONE, phone);
-        data.append(ENTRY_GOAL, goal);
-
-        await fetch(GOOGLE_FORM_RESPONSE_URL, {
-          method: "POST",
-          mode: "no-cors",
-          body: data
+        await fetch(FORM_URL,{
+          method:"POST",
+          mode:"no-cors",
+          body:data
         });
+      } catch(err){}
 
-        statusMsg.textContent = "Done ✅ Redirecting…";
+      // THANK YOU SCREEN + BUTTONS
+      box.innerHTML = `
+        <h2>✅ You’re In!</h2>
 
-      } catch (err) {
-        console.log("Google form submit error:", err);
-        statusMsg.textContent = "Redirecting…";
-      }
+        <p>Your 7-Day Reset is opening now.</p>
 
-      // Redirect to your reset / thank you
-      setTimeout(() => {
-        window.location.href = DELIVERY_LINK;
-      }, 700);
+        <p>
+          If it doesn’t open automatically,
+          <a href="${RESET_DOC}" target="_blank">click here</a>.
+        </p>
+
+        <div style="margin-top:30px; text-align:center;">
+
+          <a href="${HOME_PAGE}"
+            style="
+              display:block;
+              max-width:300px;
+              margin:0 auto 15px auto;
+              background:#000;
+              color:#fff;
+              padding:14px;
+              border-radius:10px;
+              text-decoration:none;
+              font-size:16px;
+              font-weight:bold;
+            ">
+            🏠 Back to Home
+          </a>
+
+          <a href="${COACHING_PAGE}"
+            style="
+              display:block;
+              max-width:300px;
+              margin:0 auto;
+              background:#1f1f1f;
+              color:#fff;
+              padding:14px;
+              border-radius:10px;
+              text-decoration:none;
+              font-size:16px;
+              font-weight:bold;
+              border:1px solid #333;
+            ">
+            💪 Apply for Coaching
+          </a>
+
+        </div>
+
+        <p style="margin-top:20px;">
+          Let’s work 💪🏾🔥
+        </p>
+      `;
+
+      // Open reset in new tab (mobile safe)
+      setTimeout(()=>{
+        window.open(RESET_DOC,"_blank");
+      },800);
+
     });
+
   </script>
-  <!-- ============================================= -->
 
 </body>
 </html>
