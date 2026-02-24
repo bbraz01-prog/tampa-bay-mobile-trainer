@@ -92,24 +92,27 @@
       1) GOOGLE_FORM_RESPONSE_URL (must end with /formResponse)
       2) ENTRY IDs for each field (entry.xxxxx)
 
-      ✅ FALLBACK (still works if you don’t have the above yet):
-      - It will redirect to your public Google Form link so you still capture the lead manually.
+      ✅ FALLBACK:
+      - Redirects to your public Google Form link so you still capture the lead.
     */
 
     // Your public Google Form link (fallback redirect)
-    const GOOGLE_FORM_PUBLIC_LINK = "https://forms.gle/dPGv9o1ympoxaSad7";
+    // (I’m using your full viewform link here, which is more reliable than the short forms.gle link)
+    const GOOGLE_FORM_PUBLIC_LINK =
+      "https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/viewform";
 
     // AFTER submit, send them to your Reset Doc / Thank You page
     const DELIVERY_LINK = "PASTE_YOUR_RESET_GOOGLE_DOC_OR_THANKYOU_LINK_HERE";
 
-    // ---- Paste these when you grab them ----
-    const GOOGLE_FORM_RESPONSE_URL = "PASTE_FORMRESPONSE_URL_HERE"; // example: https://docs.google.com/forms/d/e/XXXX/formResponse
+    // ✅ Filled in for you:
+    const GOOGLE_FORM_RESPONSE_URL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/formResponse";
 
+    // ❗Replace these 4 with your REAL entry IDs
     const ENTRY_NAME  = "entry.111111111111";
     const ENTRY_EMAIL = "entry.222222222222";
     const ENTRY_PHONE = "entry.333333333333";
     const ENTRY_GOAL  = "entry.444444444444";
-    // --------------------------------------
 
     const leadForm  = document.getElementById("leadForm");
     const submitBtn = document.getElementById("submitBtn");
@@ -171,7 +174,6 @@
         statusMsg.textContent = "Done ✅ Redirecting…";
 
       } catch (err) {
-        // Even if fetch fails, we’ll still redirect (and you still got the Meta Lead)
         console.log("Google form submit error:", err);
         statusMsg.textContent = "Redirecting…";
       }
