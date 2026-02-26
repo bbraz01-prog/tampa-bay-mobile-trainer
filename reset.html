@@ -84,7 +84,6 @@
 
   <!-- LOGIC -->
   <script>
-
     // Google Form submit endpoint
     const FORM_URL =
       "https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/formResponse";
@@ -95,7 +94,8 @@
 
     // Pages
     const HOME_PAGE = "index.html";
-    const COACHING_PAGE = "coaching.html";
+    const PLAN_299_PAGE = "299.html";
+    const PLAN_499_PAGE = "499.html";
 
     // Entry IDs
     const ENTRY_NAME  = "entry.14153905";
@@ -103,15 +103,13 @@
     const ENTRY_PHONE = "entry.1317232275";
     const ENTRY_GOAL  = "entry.624894712";
 
-
     const form = document.getElementById("leadForm");
     const box  = document.getElementById("mainBox");
 
     form.addEventListener("submit", async function(e){
-
       e.preventDefault();
 
-      // Fire pixel
+      // Fire pixel lead event
       if (typeof fbq === "function") fbq("track","Lead");
 
       const name  = document.getElementById("name").value;
@@ -121,20 +119,19 @@
 
       // Build payload
       const data = new FormData();
-
       data.append(ENTRY_NAME, name);
       data.append(ENTRY_EMAIL, email);
       data.append(ENTRY_PHONE, phone);
       data.append(ENTRY_GOAL, goal);
 
-      // Send to Google
+      // Send to Google Form
       try {
         await fetch(FORM_URL,{
           method:"POST",
           mode:"no-cors",
           body:data
         });
-      } catch(err){}
+      } catch(err) {}
 
       // THANK YOU SCREEN + BUTTONS
       box.innerHTML = `
@@ -152,7 +149,7 @@
           <a href="${HOME_PAGE}"
             style="
               display:block;
-              max-width:300px;
+              max-width:320px;
               margin:0 auto 15px auto;
               background:#000;
               color:#fff;
@@ -165,11 +162,11 @@
             🏠 Back to Home
           </a>
 
-          <a href="${COACHING_PAGE}"
+          <a href="${PLAN_299_PAGE}"
             style="
               display:block;
-              max-width:300px;
-              margin:0 auto;
+              max-width:320px;
+              margin:0 auto 12px auto;
               background:#1f1f1f;
               color:#fff;
               padding:14px;
@@ -179,7 +176,24 @@
               font-weight:bold;
               border:1px solid #333;
             ">
-            💪 Apply for Coaching
+            🔥 Start Coaching Now ($299)
+          </a>
+
+          <a href="${PLAN_499_PAGE}"
+            style="
+              display:block;
+              max-width:320px;
+              margin:0 auto;
+              background:#111;
+              color:#fff;
+              padding:14px;
+              border-radius:10px;
+              text-decoration:none;
+              font-size:16px;
+              font-weight:bold;
+              border:1px solid #333;
+            ">
+            ⭐ Go Elite ($499)
           </a>
 
         </div>
@@ -193,9 +207,7 @@
       setTimeout(()=>{
         window.open(RESET_DOC,"_blank");
       },800);
-
     });
-
   </script>
 
 </body>
