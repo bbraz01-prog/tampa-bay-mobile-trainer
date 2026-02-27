@@ -133,73 +133,78 @@
         });
       } catch(err) {}
 
-      // THANK YOU SCREEN + BUTTONS
+      // THANK YOU SCREEN + BUTTONS (UPDATED)
       box.innerHTML = `
         <h2>✅ You’re In!</h2>
 
-        <p>Your 7-Day Reset is opening now.</p>
+        <p style="font-size:18px; font-weight:bold; margin-top:10px;">
+          Before you leave — if you’re serious about results,
+          don’t try to do this alone.
+        </p>
 
-        <p>
-          If it doesn’t open automatically,
-          <a href="${RESET_DOC}" target="_blank">click here</a>.
+        <p style="margin-top:10px;">
+          Most people download programs. Very few stay consistent.
+        </p>
+
+        <p style="margin-top:10px;">
+          If you want structure, accountability, and real progress —
+          this is your next step.
         </p>
 
         <div style="margin-top:30px; text-align:center;">
 
-          <a href="${HOME_PAGE}"
-            style="
-              display:block;
-              max-width:320px;
-              margin:0 auto 15px auto;
-              background:#000;
-              color:#fff;
-              padding:14px;
-              border-radius:10px;
-              text-decoration:none;
-              font-size:16px;
-              font-weight:bold;
-            ">
-            🏠 Back to Home
-          </a>
-
           <a href="${PLAN_299_PAGE}"
             style="
               display:block;
-              max-width:320px;
-              margin:0 auto 12px auto;
-              background:#1f1f1f;
+              max-width:340px;
+              margin:0 auto 14px auto;
+              background:#000;
               color:#fff;
-              padding:14px;
-              border-radius:10px;
+              padding:16px;
+              border-radius:12px;
               text-decoration:none;
-              font-size:16px;
+              font-size:17px;
               font-weight:bold;
-              border:1px solid #333;
             ">
-            🔥 Start Coaching Now ($299)
+            🔥 Start Coaching Now — $299
           </a>
 
           <a href="${PLAN_499_PAGE}"
             style="
               display:block;
-              max-width:320px;
-              margin:0 auto;
+              max-width:340px;
+              margin:0 auto 14px auto;
               background:#111;
               color:#fff;
-              padding:14px;
-              border-radius:10px;
+              padding:16px;
+              border-radius:12px;
               text-decoration:none;
-              font-size:16px;
+              font-size:17px;
               font-weight:bold;
               border:1px solid #333;
             ">
-            ⭐ Go Elite ($499)
+            ⭐ I Want Elite Coaching — $499
+          </a>
+
+          <a href="${RESET_DOC}" target="_blank"
+            style="
+              display:block;
+              max-width:340px;
+              margin:0 auto;
+              background:#e5e5e5;
+              color:#000;
+              padding:12px;
+              border-radius:10px;
+              text-decoration:none;
+              font-size:14px;
+            ">
+            Just Show Me The Free Reset
           </a>
 
         </div>
 
-        <p style="margin-top:20px;">
-          Let’s work 💪🏾🔥
+        <p style="margin-top:20px; font-size:13px; color:#777;">
+          Coaching spots are limited each month.
         </p>
       `;
 
