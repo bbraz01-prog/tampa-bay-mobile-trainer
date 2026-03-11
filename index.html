@@ -1,219 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>7-Day Fat Loss Reset | Byron Online Coaching</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>7-Day Fat Loss Reset | Byron Online Coaching</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ================= META PIXEL ================= -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];
-    t=b.createElement(e);t.async=!0;
-    t.src=v;
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1420563573143889');
-    fbq('track', 'PageView');
-  </script>
+fbq('init','1420563573143889');
+fbq('track','PageView');
+</script>
+
 </head>
 
-<body style="font-family: Arial, sans-serif; background:#f8f8f8; padding:20px;">
+<body style="font-family:Arial, sans-serif; background:#f8f8f8; padding:20px;">
 
-  <div id="mainBox"
-    style="max-width:600px; margin:auto; background:#fff; padding:25px;
-    border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,.08);">
+<div id="mainBox"
+style="
+max-width:600px;
+margin:auto;
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+">
 
-    <h1>🔥 Get My Free 7-Day Fat Loss Reset</h1>
+<h1>🔥 Get My Free 7-Day Fat Loss Reset</h1>
 
-    <p>
-      Lose fat, build momentum, and feel better in just 7 days — without extreme dieting.
-    </p>
+<p>
+Lose fat, build momentum, and feel better in just 7 days — without extreme dieting.
+</p>
 
-    <h3>You’ll Get:</h3>
-    <ul>
-      <li>Home + Gym Workouts</li>
-      <li>Daily Step Goals</li>
-      <li>Simple Nutrition Structure</li>
-      <li>Accountability System</li>
-    </ul>
+<h3>You’ll Get:</h3>
 
-    <h3>Enter Your Info Below:</h3>
+<ul>
+<li>Home + Gym Workouts</li>
+<li>Daily Step Goals</li>
+<li>Simple Nutrition Structure</li>
+<li>Accountability System</li>
+</ul>
 
-    <!-- FORM -->
-    <form id="leadForm">
+<h3>Enter Your Info Below:</h3>
 
-      <input id="name" type="text" placeholder="Name" required
-        style="width:100%; padding:12px; margin-bottom:10px;">
+<form id="leadForm">
 
-      <input id="email" type="email" placeholder="Email" required
-        style="width:100%; padding:12px; margin-bottom:10px;">
+<input id="name" type="text" placeholder="Name" required
+style="width:100%; padding:12px; margin-bottom:10px;">
 
-      <input id="phone" type="tel" placeholder="Phone" required
-        style="width:100%; padding:12px; margin-bottom:10px;">
+<input id="email" type="email" placeholder="Email" required
+style="width:100%; padding:12px; margin-bottom:10px;">
 
-      <select id="goal" required
-        style="width:100%; padding:12px; margin-bottom:15px;">
-        <option>Fat Loss</option>
-        <option>Build Muscle</option>
-        <option>Tone Up</option>
-        <option>Improve Energy</option>
-        <option>Get Back in Shape</option>
-      </select>
+<input id="phone" type="tel" placeholder="Phone" required
+style="width:100%; padding:12px; margin-bottom:10px;">
 
-      <button id="submitBtn" type="submit"
-        style="width:100%; padding:14px; background:black; color:white;
-        border:none; font-size:16px; cursor:pointer;">
-        Get Free Access
-      </button>
+<select id="goal" required
+style="width:100%; padding:12px; margin-bottom:15px;">
+<option>Fat Loss</option>
+<option>Build Muscle</option>
+<option>Tone Up</option>
+<option>Improve Energy</option>
+<option>Get Back in Shape</option>
+</select>
 
-      <div id="status" style="margin-top:12px;"></div>
+<button type="submit"
+style="
+width:100%;
+padding:14px;
+background:black;
+color:white;
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:8px;
+">
+Get Free Access
+</button>
 
-    </form>
+</form>
 
-    <p style="font-size:12px; color:#555;">
-      We respect your privacy. No spam.
-    </p>
+<p style="font-size:12px;color:#555;">
+We respect your privacy. No spam.
+</p>
 
-  </div>
+</div>
 
-  <!-- LOGIC -->
-  <script>
-    // Google Form submit endpoint
-    const FORM_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/formResponse";
+<script>
 
-    // Reset Program
-    const RESET_DOC =
-      "https://docs.google.com/document/d/1qyak5SQKTRztHzg1vM8b3aPqIYF4KjEm9Rl7WYHQmM4/view?usp=sharing";
+const FORM_URL =
+"https://docs.google.com/forms/d/e/1FAIpQLSddNw9ku4TNGIUv0WDYcxNJ9LXSrrLiA5LitnSzVC8C20gvhg/formResponse";
 
-    // Pages
-    const HOME_PAGE = "index.html";
-    const PLAN_299_PAGE = "299.html";
-    const PLAN_499_PAGE = "499.html";
+const RESET_DOC =
+"https://docs.google.com/document/d/1qyak5SQKTRztHzg1vM8b3aPqIYF4KjEm9Rl7WYHQmM4/view?usp=sharing";
 
-    // Entry IDs
-    const ENTRY_NAME  = "entry.14153905";
-    const ENTRY_EMAIL = "entry.985988409";
-    const ENTRY_PHONE = "entry.1317232275";
-    const ENTRY_GOAL  = "entry.624894712";
+const PLAN_299_PAGE = "299.html";
+const PLAN_499_PAGE = "499.html";
 
-    const form = document.getElementById("leadForm");
-    const box  = document.getElementById("mainBox");
+const ENTRY_NAME  = "entry.14153905";
+const ENTRY_EMAIL = "entry.985988409";
+const ENTRY_PHONE = "entry.1317232275";
+const ENTRY_GOAL  = "entry.624894712";
 
-    form.addEventListener("submit", async function(e){
-      e.preventDefault();
+const form = document.getElementById("leadForm");
+const box  = document.getElementById("mainBox");
 
-      // Fire pixel lead event
-      if (typeof fbq === "function") fbq("track","Lead");
+form.addEventListener("submit", async function(e){
 
-      const name  = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const goal  = document.getElementById("goal").value;
+e.preventDefault();
 
-      // Build payload
-      const data = new FormData();
-      data.append(ENTRY_NAME, name);
-      data.append(ENTRY_EMAIL, email);
-      data.append(ENTRY_PHONE, phone);
-      data.append(ENTRY_GOAL, goal);
+fbq('track','Lead');
 
-      // Send to Google Form
-      try {
-        await fetch(FORM_URL,{
-          method:"POST",
-          mode:"no-cors",
-          body:data
-        });
-      } catch(err) {}
+const name  = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+const goal  = document.getElementById("goal").value;
 
-      // THANK YOU SCREEN + BUTTONS (UPDATED)
-      box.innerHTML = `
-        <h2>✅ You’re In!</h2>
+const data = new FormData();
+data.append(ENTRY_NAME,name);
+data.append(ENTRY_EMAIL,email);
+data.append(ENTRY_PHONE,phone);
+data.append(ENTRY_GOAL,goal);
 
-        <p style="font-size:18px; font-weight:bold; margin-top:10px;">
-          Before you leave — if you’re serious about results,
-          don’t try to do this alone.
-        </p>
+try{
+await fetch(FORM_URL,{
+method:"POST",
+mode:"no-cors",
+body:data
+});
+}catch(err){}
 
-        <p style="margin-top:10px;">
-          Most people download programs. Very few stay consistent.
-        </p>
+box.innerHTML = `
 
-        <p style="margin-top:10px;">
-          If you want structure, accountability, and real progress —
-          this is your next step.
-        </p>
+<h2>✅ You're In!</h2>
 
-        <div style="margin-top:30px; text-align:center;">
+<p style="font-size:18px;font-weight:bold;">
+Before you leave — if you're serious about results, don't try to do this alone.
+</p>
 
-          <a href="${PLAN_299_PAGE}"
-            style="
-              display:block;
-              max-width:340px;
-              margin:0 auto 14px auto;
-              background:#000;
-              color:#fff;
-              padding:16px;
-              border-radius:12px;
-              text-decoration:none;
-              font-size:17px;
-              font-weight:bold;
-            ">
-            🔥 Start Coaching Now — $299
-          </a>
+<p>
+Most people download programs. Very few stay consistent.
+</p>
 
-          <a href="${PLAN_499_PAGE}"
-            style="
-              display:block;
-              max-width:340px;
-              margin:0 auto 14px auto;
-              background:#111;
-              color:#fff;
-              padding:16px;
-              border-radius:12px;
-              text-decoration:none;
-              font-size:17px;
-              font-weight:bold;
-              border:1px solid #333;
-            ">
-            ⭐ I Want Elite Coaching — $499
-          </a>
+<p>
+If you want structure, accountability, and real progress — this is your next step.
+</p>
 
-          <a href="${RESET_DOC}" target="_blank"
-            style="
-              display:block;
-              max-width:340px;
-              margin:0 auto;
-              background:#e5e5e5;
-              color:#000;
-              padding:12px;
-              border-radius:10px;
-              text-decoration:none;
-              font-size:14px;
-            ">
-            Just Show Me The Free Reset
-          </a>
+<div style="margin-top:30px;">
 
-        </div>
+<a href="${PLAN_299_PAGE}"
+style="
+display:block;
+max-width:340px;
+margin:0 auto 14px auto;
+background:black;
+color:white;
+padding:16px;
+border-radius:12px;
+text-decoration:none;
+font-size:17px;
+font-weight:bold;
+">
+🔥 Start Coaching Now — $299
+</a>
 
-        <p style="margin-top:20px; font-size:13px; color:#777;">
-          Coaching spots are limited each month.
-        </p>
-      `;
+<a href="${PLAN_499_PAGE}"
+style="
+display:block;
+max-width:340px;
+margin:0 auto 14px auto;
+background:#111;
+color:white;
+padding:16px;
+border-radius:12px;
+text-decoration:none;
+font-size:17px;
+font-weight:bold;
+border:1px solid #333;
+">
+⭐ I Want Elite Coaching — $499
+</a>
 
-      // Open reset in new tab (mobile safe)
-      setTimeout(()=>{
-        window.open(RESET_DOC,"_blank");
-      },800);
-    });
-  </script>
+<a href="${RESET_DOC}" target="_blank"
+style="
+display:block;
+max-width:340px;
+margin:0 auto;
+background:#e5e5e5;
+color:black;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-size:14px;
+">
+Just Show Me The Free Reset
+</a>
+
+</div>
+
+<p style="margin-top:20px;font-size:13px;color:#777;">
+Coaching spots are limited each month.
+</p>
+
+`;
+
+setTimeout(()=>{
+window.open(RESET_DOC,"_blank");
+},800);
+
+});
+
+</script>
 
 </body>
 </html>
