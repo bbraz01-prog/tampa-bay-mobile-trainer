@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Fitness Goal</title>
+
+<script>
+  function selectGoal(goal){
+    localStorage.setItem("goal", goal);
+    window.location.href = "struggle.html";
+  }
+</script>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+padding:40px;
+background:#f5f5f5;
+}
+
+button{
+display:block;
+width:80%;
+margin:15px auto;
+padding:18px;
+font-size:18px;
+background:black;
+color:white;
+border:none;
+border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>What's your main goal right now?</h2>
+
+<button onclick="selectGoal('Fat Loss')">Lose Fat</button>
+<button onclick="selectGoal('Muscle')">Build Muscle</button>
+<button onclick="selectGoal('Tone')">Tone Up</button>
+<button onclick="selectGoal('Energy')">Improve Energy</button>
+
+</body>
+</html>
