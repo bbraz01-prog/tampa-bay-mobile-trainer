@@ -1,60 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Get Your Reset Plan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script>
 function submitForm(){
 
+if (typeof fbq !== 'undefined'){
 fbq('track','Lead');
+}
 
 let goal = localStorage.getItem("goal");
 let struggle = localStorage.getItem("struggle");
 
-console.log(goal,struggle);
+document.getElementById("goalField").value = goal;
+document.getElementById("struggleField").value = struggle;
 
-window.location.href="https://ransomedbodies.typeform.com/to/YOURFORM";
+setTimeout(function(){
+window.location.href="https://docs.google.com/forms/d/e/1FAIpQLSdukmTTDAa8FFbLCKpp-alQ67m5ZDlbGtadXXKqlWjD1wsgEw/viewform";
+},500);
+
 }
 </script>
 
 <style>
+
 body{
 font-family: Arial;
 text-align:center;
-padding:40px;
+padding:30px;
 background:#f5f5f5;
+}
+
+.container{
+max-width:400px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+margin-bottom:20px;
 }
 
 input{
 display:block;
-width:80%;
-margin:10px auto;
-padding:12px;
+width:100%;
+margin:10px 0;
+padding:14px;
 font-size:16px;
+border:1px solid #ccc;
+border-radius:6px;
 }
 
 button{
-margin-top:20px;
-padding:15px 30px;
+margin-top:15px;
+padding:16px;
 font-size:18px;
 background:black;
 color:white;
 border:none;
 border-radius:8px;
+width:100%;
+cursor:pointer;
 }
+
+button:hover{
+background:#222;
+}
+
 </style>
+
 </head>
 
 <body>
 
+<div class="container">
+
 <h2>Enter your info to get your reset plan</h2>
 
-<input placeholder="Name">
-<input placeholder="Email">
-<input placeholder="Phone">
-<input placeholder="Instagram (optional)">
+<form onsubmit="event.preventDefault(); submitForm();">
 
-<button onclick="submitForm()">Send My Reset Plan</button>
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<input type="tel" placeholder="Phone">
+<input type="text" placeholder="Instagram (optional)">
+
+<input type="hidden" id="goalField">
+<input type="hidden" id="struggleField">
+
+<button type="submit">Send My Reset Plan</button>
+
+</form>
+
+</div>
 
 </body>
+
 </html>
