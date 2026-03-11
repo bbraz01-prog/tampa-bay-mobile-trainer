@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Biggest Struggle</title>
+
+<script>
+  function selectStruggle(struggle){
+    localStorage.setItem("struggle", struggle);
+    window.location.href = "lead.html";
+  }
+</script>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+padding:40px;
+background:#f5f5f5;
+}
+
+button{
+display:block;
+width:80%;
+margin:15px auto;
+padding:18px;
+font-size:18px;
+background:black;
+color:white;
+border:none;
+border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>What's been the hardest part?</h2>
+
+<button onclick="selectStruggle('Nutrition')">Nutrition</button>
+<button onclick="selectStruggle('Consistency')">Consistency</button>
+<button onclick="selectStruggle('Busy Schedule')">Busy Schedule</button>
+<button onclick="selectStruggle('Motivation')">Motivation</button>
+
+</body>
+</html>
